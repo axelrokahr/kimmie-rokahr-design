@@ -12,6 +12,13 @@ export default function CustomCursor() {
 
   // Reset cursor state when pathname changes
   useEffect(() => {
+    // Declare updateCursor here so it is in scope for cleanup
+    const updateCursor = (e: MouseEvent) => {
+      setPosition({
+        x: e.clientX,
+        y: e.clientY,
+      });
+    };
     setIsHoveringTarget(false);
   }, [pathname]);
 
@@ -28,18 +35,21 @@ export default function CustomCursor() {
       });
     };
 
+
     // Mouse move listener
     window.addEventListener('mousemove', updateCursor);
 
     // Mouse out and over listeners on document to detect when the mouse leaves or enters the viewport
     const handleMouseOut = (e: MouseEvent) => {
-      if (!e.relatedTarget && !(e as any).toElement) {
+      const event = e as MouseEvent & { toElement?: EventTarget | null };
+      if (!e.relatedTarget && !event.toElement) {
         setIsVisible(false);
       }
     };
 
     const handleMouseOver = (e: MouseEvent) => {
-      if (!e.relatedTarget && !(e as any).fromElement) {
+      const event = e as MouseEvent & { fromElement?: EventTarget | null };
+      if (!e.relatedTarget && !event.fromElement) {
         setIsVisible(true);
       }
     };
@@ -57,7 +67,6 @@ export default function CustomCursor() {
         setIsHoveringTarget(true);
       }
     };
-
     const handleTargetMouseOut = (e: MouseEvent) => {
       const target = e.target as HTMLElement;
       if (

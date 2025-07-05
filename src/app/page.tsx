@@ -49,7 +49,7 @@ export default function Home() {
           </div>
           <div className="project-text">
             <h2>Effortless Elegance</h2>
-            <p>This townhome was designed for a homeowner transitioning to a smaller space, without sacrificing comfort or beauty. Every cabinet, drawer, and hidden storage solution was created to fit the client's lifestyle—from a concealed coffee nook for quiet mornings to a custom wet bar perfect for entertaining friends. Thoughtful details, like hidden pull-out hampers in the master bath and purpose-built storage for every item, ensure that everything has a place. The result? A home that feels welcoming, organized, and ready to enjoy from the moment you move in.</p>
+            <p>This townhome was designed for a homeowner transitioning to a smaller space, without sacrificing comfort or beauty. Every cabinet, drawer, and hidden storage solution was created to fit the client&apos;s lifestyle—from a concealed coffee nook for quiet mornings to a custom wet bar perfect for entertaining friends. Thoughtful details, like hidden pull-out hampers in the master bath and purpose-built storage for every item, ensure that everything has a place. The result? A home that feels welcoming, organized, and ready to enjoy from the moment you move in.</p>
           </div>
         </div>
       </section>

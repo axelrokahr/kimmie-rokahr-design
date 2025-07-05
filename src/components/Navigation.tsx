@@ -1,7 +1,9 @@
 'use client';
 
+
 import { useEffect, useState } from 'react';
 import { usePathname } from 'next/navigation';
+import Link from 'next/link';
 
 export default function Navigation() {
   const [scrollOpacity, setScrollOpacity] = useState(1);
@@ -33,15 +35,15 @@ export default function Navigation() {
       pointerEvents: scrollOpacity < 0.1 ? 'none' : 'auto'
     }}>
       <div className="brand">
-        <a href="/" className="change-cursor" style={{color: 'inherit', textDecoration: 'none'}}>
+        <Link href="/" className="change-cursor" style={{color: 'inherit', textDecoration: 'none'}}>
           Kimmie Rokahr Design
-        </a>
+        </Link>
       </div>
       <ul>
-        <li><a href={isOnSubPage ? "/#home" : "#home"} className="change-cursor">Home</a></li>
-        <li><a href={isOnSubPage ? "/#about" : "#about"} className="change-cursor">About</a></li>
-        <li><a href={isOnSubPage ? "/#portfolio" : "#portfolio"} className="change-cursor">Portfolio</a></li>
-        <li><a href={isOnSubPage ? "/#contact" : "#contact"} className="change-cursor">Contact</a></li>
+        <li><Link href={isOnSubPage ? "/#home" : "#home"} className="change-cursor">Home</Link></li>
+        <li><Link href={isOnSubPage ? "/#about" : "#about"} className="change-cursor">About</Link></li>
+        <li><Link href={isOnSubPage ? "/#portfolio" : "#portfolio"} className="change-cursor">Portfolio</Link></li>
+        <li><Link href={isOnSubPage ? "/#contact" : "#contact"} className="change-cursor">Contact</Link></li>
       </ul>
     </nav>
   );

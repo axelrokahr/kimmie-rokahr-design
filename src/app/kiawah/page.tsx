@@ -11,10 +11,10 @@ export default function KiawahKitchen() {
 
       {/* Project Details Section */}
       <section id="project-details" className="about">
-        <div className="about-grid-cope">
+        <div className="about-grid-alt">
           <div className="about-text">
             <h2>Coastal Elegance</h2>
-            <p>This Kiawah kitchen was designed to capture the essence of coastal living while maintaining sophisticated functionality. With thoughtful design elements that reflect the island's natural beauty, every detail was crafted to create a space that feels both luxurious and effortlessly relaxed.</p>
+            <p>This Kiawah kitchen was designed to capture the essence of coastal living while maintaining sophisticated functionality. With thoughtful design elements that reflect the island&apos;s natural beauty, every detail was crafted to create a space that feels both luxurious and effortlessly relaxed.</p>
           </div>
           <div className="about-logo">
             <Image 
@@ -22,7 +22,7 @@ export default function KiawahKitchen() {
               alt="Kiawah Kitchen" 
               width={640}
               height={640}
-              className="kr-logo-cope"
+              className="kr-logo-alt"
               style={{objectFit: 'cover'}}
             />
           </div>
@@ -88,7 +88,7 @@ export default function KiawahKitchen() {
 
           {/* Centered Blockquote */}
           <blockquote className="detailed-quote">
-            "We created a space that feels like a natural extension of the island itself—where the beauty of coastal living meets the comfort of home."
+            &quot;We created a space that feels like a natural extension of the island itself—where the beauty of coastal living meets the comfort of home.&quot;
           </blockquote>
 
           {/* Single Large Image */}
