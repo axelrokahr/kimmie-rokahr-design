@@ -16,6 +16,11 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Kimmie Rokahr Design | Kitchen & Bath Designer Charlotte, NC",
   description: "Renowned kitchen and bath designer in Charlotte, NC. 15 years of experience creating functional, elegant kitchens blending modern aesthetics with timeless design principles.",
+  icons: {
+    icon: "/images/KR_logo.png",
+    shortcut: "/images/KR_logo.png",
+    apple: "/images/KR_logo.png"
+  },
 };
 
 export default function RootLayout({
