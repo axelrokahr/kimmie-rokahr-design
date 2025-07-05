@@ -13,8 +13,8 @@ export default function KiawahKitchen() {
       <section id="project-details" className="about">
         <div className="about-grid-alt">
           <div className="about-text">
-            <h2>Coastal Elegance</h2>
-            <p>This Kiawah kitchen was designed to capture the essence of coastal living while maintaining sophisticated functionality. With thoughtful design elements that reflect the island&apos;s natural beauty, every detail was crafted to create a space that feels both luxurious and effortlessly relaxed.</p>
+            <h2>Simply Livable, Beautifully Bright</h2>
+            <p>This Kiawah cottage was thoughtfully reimagined to create an easy flow between kitchen, living, and outdoor spaces, welcoming both lively gatherings and quiet relaxation. Bright finishes, natural textures, and smart, simple design choices ensure each room feels connected, fresh, and uncluttered. With the kitchen positioned to blend seamlessly into the heart of the home, daily life here is naturally comfortable and effortlessly inviting.</p>
           </div>
           <div className="about-logo">
             <Image 
@@ -39,7 +39,7 @@ export default function KiawahKitchen() {
             {/* Column A (Left) - Text, Image, Text, Image */}
             <div className="column-a">
               <p className="detail-text">
-                Natural materials and thoughtful lighting create a warm, inviting atmosphere that captures the relaxed elegance of island life.
+                Playful fish-scale tiles add a touch of coastal charm to the bathroom, bringing texture and a hint of whimsy to this fresh, easygoing space.
               </p>
               <Image 
                 src="/images/kiawah/kiawah2.jpg" 
@@ -49,7 +49,7 @@ export default function KiawahKitchen() {
                 className="detailed-img"
               />
               <p className="detail-text">
-                Coastal-inspired cabinetry with custom hardware creates a seamless blend of elegance and functionality, perfectly suited for beachside living.
+                Every inch was touched, from popcorn ceilings to pine floors, to create a cottage ready for gatherings and getaways.
               </p>
               <Image 
                 src="/images/kiawah/kiawah4.jpg" 
@@ -88,7 +88,7 @@ export default function KiawahKitchen() {
 
           {/* Centered Blockquote */}
           <blockquote className="detailed-quote">
-            &quot;We created a space that feels like a natural extension of the island itself—where the beauty of coastal living meets the comfort of home.&quot;
+            Even in a small cottage with people, pets, and beach gear coming and going, we wanted it to feel bright, welcoming, and easy to keep tidy.
           </blockquote>
 
           {/* Single Large Image */}

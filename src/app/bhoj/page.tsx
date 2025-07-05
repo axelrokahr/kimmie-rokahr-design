@@ -98,6 +98,10 @@ export default function BhojKitchen() {
               style={{width: '100%', height: 'auto'}}
             />
           </div>
+          {/* Credits (left-aligned, in content container, below last image, above contact) */}
+          <div className="credits" style={{ color: '#888', fontStyle: 'italic', marginTop: '2rem', textAlign: 'left', marginLeft: 0 }}>
+            <span>In collaboration with Diel Design &amp; Dustin Peck Photography</span>
+          </div>
         </div>
       </section>
 

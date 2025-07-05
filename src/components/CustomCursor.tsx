@@ -109,13 +109,14 @@ export default function CustomCursor() {
           left: `${position.x}px`,
           top: `${position.y}px`,
           backgroundColor: isHoveringTarget ? '#A7B5C0' : '#36454F',
+          border: 'none',
           width: '20px',
           height: '20px',
           borderRadius: '50%',
           transform: 'translate(-50%, -50%)',
           pointerEvents: 'none',
           zIndex: 9999,
-          transition: 'background-color 0.2s ease, transform 0.1s ease',
+          transition: 'background-color 0.2s ease, border 0.2s ease, transform 0.1s ease',
         }}
       ></div>
     ),

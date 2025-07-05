@@ -100,8 +100,8 @@ export default function Home() {
             </Link>
           </div>
           <div className="project-text">
-            <h2>Kiawah Island Retreat</h2>
-            <p>This coastal kitchen captures the essence of island living while maintaining sophisticated functionality. Designed for a family who loves to entertain, every detail reflects the natural beauty of Kiawah Island. Light-filled spaces, natural materials, and thoughtful storage solutions create a seamless blend of luxury and relaxed coastal charm. The result is a kitchen that feels like a natural extension of the island itself, where memorable meals and gatherings flow as naturally as the ocean breeze.</p>
+            <h2>River Views &amp; Relaxed Vibes</h2>
+            <p>This Kiawah cottage was completely reimagined to bring new life to a classic 1970s retreat. Every surface and space was touched, from smoothing popcorn ceilings to restoring pine floors, adding light and warmth throughout. Cost-conscious choices allowed for new furnishings and easy-care materials, while each room features thoughtful details—like shiplap walls, textured slipcovers, and quartz countertops with subtle blue veining—for a sense of relaxed character. Smart storage, practical finishes, and brighter colors keep the cottage feeling tidy and inviting, no matter how many friends, family, or pets come and go. The result is a refreshed getaway that’s both functional and effortlessly welcoming, ready for gatherings or quiet moments by the river.</p>
           </div>
         </div>
       </section>
