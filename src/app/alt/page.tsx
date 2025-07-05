@@ -80,7 +80,7 @@ export default function AltKitchen() {
                 className="detailed-img"
               />
               <p className="detail-text">
-                Custom‑designed bar area with woven mesh doors, concealed appliances, storage for barware, mixers, and even a dedicated spot for the homeowner's handbag—everything perfectly mapped out for easy entertaining.
+                Custom‑designed bar area with woven mesh doors, concealed appliances, storage for barware, mixers, and even a dedicated spot for the homeowner&apos;s handbag—everything perfectly mapped out for easy entertaining.
               </p>
               <Image 
                 src="/images/alt/alt9.jpg" 
@@ -108,7 +108,7 @@ export default function AltKitchen() {
 
           {/* Centered Blockquote */}
           <blockquote className="detailed-quote">
-            "We inventoried everything the family wanted to keep, so from day one, they knew exactly where every item belonged and could immediately start enjoying their new townhome."
+            &quot;We inventoried everything the family wanted to keep, so from day one, they knew exactly where every item belonged and could immediately start enjoying their new townhome.&quot;
           </blockquote>
 
           {/* Four Image Grid */}

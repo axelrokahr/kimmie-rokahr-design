@@ -12,13 +12,7 @@ export default function CustomCursor() {
 
   // Reset cursor state when pathname changes
   useEffect(() => {
-    // Declare updateCursor here so it is in scope for cleanup
-    const updateCursor = (e: MouseEvent) => {
-      setPosition({
-        x: e.clientX,
-        y: e.clientY,
-      });
-    };
+    // Remove unused updateCursor declaration to fix lint error
     setIsHoveringTarget(false);
   }, [pathname]);
 
