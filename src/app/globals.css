@@ -170,14 +170,15 @@ nav a:hover::after {
   margin: 0 auto;
 }
 
-.kr-logo {
-  width: 180px;
-  height: 180px;
-  border-radius: 12px;
-  object-fit: contain;
-  background: #fff;
-  padding: 20px;
-}
+  .kr-logo {
+    width: 180px;
+    height: 180px;
+    border-radius: 12px;
+    object-fit: contain !important;
+    aspect-ratio: 1 / 1;
+    background: #fff;
+    padding: 20px;
+  }
 
 .about-text p {
   font-size: 22px;
