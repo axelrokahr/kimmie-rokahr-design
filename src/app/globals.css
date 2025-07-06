@@ -746,7 +746,7 @@ footer {
     gap: 24px;
     align-items: center;
     max-width: 100vw;
-    padding: 0 8px;
+    padding: 0 2vw;
   }
   .kr-logo, .kr-logo-alt {
     width: 120px !important;
@@ -761,12 +761,13 @@ footer {
   .about-text p {
     font-size: 1rem;
     text-align: center;
+    padding: 0 2vw;
   }
   .section-divider {
     margin: 32px 0;
   }
   .detailed-container {
-    padding: 0 4px;
+    padding: 0 2vw;
   }
   .detailed-grid {
     display: flex;
@@ -786,7 +787,7 @@ footer {
   .detailed-quote {
     margin: 40px auto;
     font-size: 1rem;
-    padding: 0 8px;
+    padding: 0 2vw;
   }
   .single-large-image {
     margin: 24px 0;
@@ -802,7 +803,7 @@ footer {
     font-size: 0.95rem;
     margin: 24px 0 0 0;
     text-align: center !important;
-    padding: 0 8px;
+    padding: 0 2vw;
   }
   .gallery-grid, .portfolio-images {
     flex-direction: column;
