@@ -709,51 +709,125 @@ footer {
   }
 }
 
+
 @media (max-width: 600px) {
+  html, body {
+    font-size: 16px;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+  }
   nav {
-    padding: 20px 24px;
+    padding: 12px 10px;
+    flex-direction: column;
+    align-items: flex-start;
   }
-  
   nav ul {
-    gap: 24px;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    align-items: flex-start;
   }
-  
   nav a {
-    font-size: 12px;
-  }
-  
-  .brand {
-    font-size: 18px;
-  }
-  
-  .gallery-item {
+    font-size: 16px;
+    padding: 10px 0;
+    display: block;
     width: 100%;
   }
-}
-
-@media (max-width: 1024px) {
-  .detailed-container {
-    padding: 0 32px;
+  .brand {
+    font-size: 22px;
+    margin-bottom: 8px;
   }
-  
+  .about {
+    padding: 32px 0 16px 0;
+  }
+  .about-grid, .about-grid-alt {
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+    max-width: 100vw;
+    padding: 0 8px;
+  }
+  .kr-logo, .kr-logo-alt {
+    width: 120px !important;
+    height: 120px !important;
+    padding: 8px !important;
+    border-radius: 8px;
+  }
+  .about-text h2 {
+    font-size: 1.5rem;
+    margin-bottom: 16px;
+  }
+  .about-text p {
+    font-size: 1rem;
+    text-align: center;
+  }
+  .section-divider {
+    margin: 32px 0;
+  }
+  .detailed-container {
+    padding: 0 4px;
+  }
   .detailed-grid {
-    grid-template-columns: 1fr;
-    gap: 16px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
   }
-}
-
-@media (max-width: 640px) {
-  .detailed-container {
-    padding: 0 16px;
+  .column-a, .column-b {
+    width: 100%;
+    padding: 0;
   }
-  
-  .detailed-content {
-    padding: 64px 0;
+  .detailed-img, .detailed-img-flex {
+    width: 100% !important;
+    height: auto !important;
+    max-width: 100vw;
+    border-radius: 8px;
   }
-  
   .detailed-quote {
-    margin: 96px auto;
-    font-size: 20px;
+    margin: 40px auto;
+    font-size: 1rem;
+    padding: 0 8px;
+  }
+  .single-large-image {
+    margin: 24px 0;
+  }
+  .footer-content {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    font-size: 1rem;
+    padding: 16px 0;
+  }
+  .credits {
+    font-size: 0.95rem;
+    margin: 24px 0 0 0;
+    text-align: center !important;
+    padding: 0 8px;
+  }
+  .gallery-grid, .portfolio-images {
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+  }
+  .gallery-item {
+    width: 100% !important;
+    margin: 0 auto;
+  }
+  .portfolio-label {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  .project-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    padding: 0 8px;
+  }
+  .project-text {
+    text-align: center;
+  }
+  .project-text h2 {
+    font-size: 1.25rem;
   }
 }
 
