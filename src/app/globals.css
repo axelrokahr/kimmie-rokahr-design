@@ -743,10 +743,10 @@ footer {
   }
   .about-grid, .about-grid-alt {
     flex-direction: column;
-    gap: 24px;
+    gap: 12px;
     align-items: center;
     max-width: 100vw;
-    padding: 0 2vw;
+    padding: 0 1vw;
   }
   .kr-logo, .kr-logo-alt {
     width: 120px !important;
@@ -755,13 +755,13 @@ footer {
     border-radius: 8px;
   }
   .about-text h2 {
-    font-size: 1.5rem;
-    margin-bottom: 16px;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
   }
   .about-text p {
-    font-size: 1rem;
+    font-size: 0.95rem;
     text-align: center;
-    padding: 0 2vw;
+    padding: 0 1vw;
   }
   .section-divider {
     margin: 32px 0;
