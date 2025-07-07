@@ -6,20 +6,27 @@ import { usePathname } from 'next/navigation';
 export default function CustomCursor() {
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [isHoveringTarget, setIsHoveringTarget] = useState(false);
-  const [isVisible, setIsVisible] = useState(false); // Initially hidden to avoid SSR mismatch
-  const [isClient, setIsClient] = useState(false); // State to check if on client side
+  const [isVisible, setIsVisible] = useState(false);
+  const [isClient, setIsClient] = useState(false);
+  const [isTouch, setIsTouch] = useState(false);
   const pathname = usePathname();
+
+  // Detect touch device on mount
+  useEffect(() => {
+    setIsClient(true);
+    if (typeof window !== 'undefined') {
+      const touch = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+      setIsTouch(touch);
+    }
+  }, []);
 
   // Reset cursor state when pathname changes
   useEffect(() => {
-    // Remove unused updateCursor declaration to fix lint error
     setIsHoveringTarget(false);
   }, [pathname]);
 
   useEffect(() => {
-    // Set isClient to true after mounting, enabling client-side rendering
-    setIsClient(true);
-
+    if (!isClient || isTouch) return;
     if (typeof window === 'undefined' || typeof document === 'undefined') return;
 
     const updateCursor = (e: MouseEvent) => {
@@ -29,18 +36,14 @@ export default function CustomCursor() {
       });
     };
 
-
-    // Mouse move listener
     window.addEventListener('mousemove', updateCursor);
 
-    // Mouse out and over listeners on document to detect when the mouse leaves or enters the viewport
     const handleMouseOut = (e: MouseEvent) => {
       const event = e as MouseEvent & { toElement?: EventTarget | null };
       if (!e.relatedTarget && !event.toElement) {
         setIsVisible(false);
       }
     };
-
     const handleMouseOver = (e: MouseEvent) => {
       const event = e as MouseEvent & { fromElement?: EventTarget | null };
       if (!e.relatedTarget && !event.fromElement) {
@@ -51,7 +54,6 @@ export default function CustomCursor() {
     document.addEventListener('mouseout', handleMouseOut);
     document.addEventListener('mouseover', handleMouseOver);
 
-    // Event delegation for mouseover and mouseout on target elements
     const handleTargetMouseOver = (e: MouseEvent) => {
       const target = e.target as HTMLElement;
       if (
@@ -74,8 +76,9 @@ export default function CustomCursor() {
     document.addEventListener('mouseover', handleTargetMouseOver);
     document.addEventListener('mouseout', handleTargetMouseOut);
 
-    // Set initial visibility when mouse is in viewport
     setIsVisible(true);
+
+    document.body.style.cursor = 'none';
 
     return () => {
       window.removeEventListener('mousemove', updateCursor);
@@ -83,22 +86,12 @@ export default function CustomCursor() {
       document.removeEventListener('mouseover', handleMouseOver);
       document.removeEventListener('mouseover', handleTargetMouseOver);
       document.removeEventListener('mouseout', handleTargetMouseOut);
-    };
-  }, []);
-
-  useEffect(() => {
-    if (typeof window === 'undefined' || typeof document === 'undefined') return;
-
-    const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
-    document.body.style.cursor = isTouchDevice ? 'auto' : 'none';
-
-    return () => {
       document.body.style.cursor = 'auto';
     };
-  }, []);
+  }, [isClient, isTouch]);
 
-  // Only render the cursor on the client
-  if (!isClient) return null;
+  // Only render the cursor on the client and if not touch
+  if (!isClient || isTouch) return null;
 
   return createPortal(
     isVisible && (
