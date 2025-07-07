@@ -1,1 +1,0 @@
-This file is a placeholder to trigger deletion of favicon files. Please delete favicon.png and favicon.svg if they exist.
