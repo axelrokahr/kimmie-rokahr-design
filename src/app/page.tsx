@@ -378,7 +378,7 @@ export default function Home() {
         <div className="footer-content">
           <span>© Kimmie Rokahr Design</span>
           <span>
-            <a href="mailto:kimmie@kimmierokahrdesign.com">kimmie@kimmierokahrdesign.com</a> | <a href="tel:+17046857027">(704) 685-7027</a>
+            <a href="mailto:kimmie@kimmierokahrdesign.com">kimmie@KimmieRokahrDesign.com</a> | <a href="tel:+17046857027">(704) 685-7027</a>
           </span>
           <span>Charlotte, NC</span>
         </div>
